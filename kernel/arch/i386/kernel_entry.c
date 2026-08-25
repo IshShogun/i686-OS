@@ -12,12 +12,12 @@ void read_boot_info_multiboot2(unsigned long multiboot2_magic, unsigned long mul
 
 	if (multiboot2_magic != MULTIBOOT2_BOOTLOADER_MAGIC)
 	{
-		panic("MULTIBOOT2 MAGIC ERROR");
+		panic_without_error();
 	}
 
 	if (multiboot2_info_addr & 7)
 	{
-		panic("MULTIBOOT2 INFO ADDRESS NOT ALIGNED");
+		panic_without_error();
 	}
 
 	//the first thing at the info addr is just a uint32 total_size by the specification - header. so we dereference it to  get first value

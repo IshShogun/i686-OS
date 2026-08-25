@@ -60,7 +60,7 @@ multiboot_entry:
 				call _init
 
         /*  Now enter the C main function... */
-        call    kernel_main
+        call    kernel_entry
 
         /*  Halt. */
 loop:   hlt

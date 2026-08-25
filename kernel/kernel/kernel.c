@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <kernel/tty.h>
+#include "multiboot2.h"
+
+
+void panic(const char *msg) {
+		if (terminal_ready())
+			terminal_writestring(msg);
+    asm volatile("cli");
+    for (;;) asm volatile("hlt");
+}
+
+void panic_without_error() {
+    asm volatile("cli");
+    for (;;) asm volatile("hlt");
+}
+
+void kernel_main(unsigned long multiboot2_magic, unsigned long multiboot2_info_addr)
+{
+	//GOAL: have these two on top of eachother. 
+	//after first draw_string we should have Hello WOrlds and an empty row under it
+	terminal_writestring("Hello, world\n");
+}

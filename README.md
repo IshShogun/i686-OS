@@ -30,3 +30,5 @@ Also whats the point of a libk? just write a libc, we have to have a bunch a __i
 # Conclusion
 
 Adapting osdev wiki barebones to multiboot2 and framebuffer tty in a 32bit OS was interesting. But now i have to do the remap with lowmem and highmem, which interests me less at the moment than paging, scheduling and interrupts. So i'm moving to limine x86_64.
+
+And also forget this codebase structure given by the tutorial, its for a lack of better words - hell. lol.

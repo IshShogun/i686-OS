@@ -16,7 +16,9 @@ pages can be reused with the bottom half of the address space.
 
 While remapping is still done in x86_64, this specific lowmem/highmem solution is definitely legacy and i would rather implement a grub/mb2/hhdm remap in 64bit if i come to it.
 
-For now as i've played with multiboot2 and studied MentOS i want to play with paging, context switching and interrupts now. So i am moving to a x86_64 limine kernel now. 
+For now as i've played with multiboot2 and studied MentOS i want to play with paging, context switching and interrupts now. So i am moving to a x86_64 limine kernel now. }
+
+Plus with limine i dont have to worry about firmware and architecture for MB2. 
 
 ### Issue 2: Dumb code, dumb structure
 
